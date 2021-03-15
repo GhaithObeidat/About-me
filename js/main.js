@@ -2,7 +2,6 @@
 
 let userName = prompt('What is your name?');
 alert('Welcome ' + userName);
-console.log(userName);
 
 let age = prompt('do you think my age is more than 25?');
 if(age .toLowerCase()==='no' || age .toLowerCase()==='n')
@@ -73,3 +72,4 @@ else{
   alert('It is alright I know nobody is intersted in that');
 }
 console.log(Study);
+alert('Thanks for your time ' + userName);
