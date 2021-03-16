@@ -14,3 +14,12 @@ p{
     
     text-align: center;
 }
+h3{
+    color: rgb(54, 90, 82);
+}
+ol{
+    color: rgb(99, 84, 26);
+}
+ul {
+   list-style: none; 
+}

@@ -72,4 +72,52 @@ else{
   alert('It is alright I know nobody is intersted in that');
 }
 console.log(Study);
+
+let number=prompt('From 1 to 10 Guess which day is my birthday');
+for (let i=4 ; i>1 ; i--)
+{
+  if (number === '9')
+  {
+    alert('That is absolutely right');
+    break;
+  }
+  else if(number>9){
+    alert('Too high');
+    number=prompt('From 1 to 10 Guess which day is my birthday');
+  }
+  else if (number<9){
+    alert('Too low');
+    number=prompt('From 1 to 10 Guess which day is my birthday');
+  }
+  else if (number!==9){
+    alert('My birthday is on the 9th of May');
+
+  }
+  else {
+    break;
+  }
+
+}
+
+let color=['green', 'yellow', 'black', 'grey'];
+let guess=prompt('which colors do you think I like? green, yellow, black, grey');
+
+for(let i=6 ; i>1 ; i--)
+{
+  if(guess .toLowerCase()===color[2] || guess .toLowerCase()===color[3]) {
+    alert('You are definetely right!');
+    break;
+  }
+  else if (guess .toLowerCase()===color[0] && guess .toLowerCase()===color[1]){
+    alert('Wrong');
+    guess=prompt('which colors do you think I like? green, yellow, black, grey');
+  }
+  else if (guess .toLowerCase() !==color)
+  {
+    guess=prompt('which colors do you think I like? green, yellow, black, grey');
+  }
+  else {
+    break;
+  }
+}
 alert('Thanks for your time ' + userName);
