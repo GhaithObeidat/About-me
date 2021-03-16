@@ -74,7 +74,7 @@ else{
 console.log(Study);
 
 let number=prompt('From 1 to 10 Guess which day is my birthday');
-for (let i=4 ; i>1 ; i--)
+for (let i=0 ; i<4 ; i++)
 {
   if (number === '9')
   {
@@ -89,12 +89,9 @@ for (let i=4 ; i>1 ; i--)
     alert('Too low');
     number=prompt('From 1 to 10 Guess which day is my birthday');
   }
-  else if (number!==9){
-    alert('My birthday is on the 9th of May');
-
-  }
   else {
-    break;
+    number=prompt('Invalid entry');
+    alert('My birthday is on the 9th of May');
   }
 
 }
@@ -102,13 +99,14 @@ for (let i=4 ; i>1 ; i--)
 let color=['green', 'yellow', 'black', 'grey'];
 let guess=prompt('which colors do you think I like? green, yellow, black, grey');
 
-for(let i=6 ; i>1 ; i--)
+for(let i=0 ; i<6 ; i++)
 {
-  if(guess .toLowerCase()===color[2] || guess .toLowerCase()===color[3]) {
-    alert('You are definetely right!');
+  if(guess .toLowerCase()==='grey' || guess .toLowerCase()==='black') {
+    guess=prompt('You are definetely right! Now try another one');
+    alert('Definetely right');
     break;
   }
-  else if (guess .toLowerCase()===color[0] && guess .toLowerCase()===color[1]){
+  else if (guess .toLowerCase()==='yellow' || guess .toLowerCase()==='green'){
     alert('Wrong');
     guess=prompt('which colors do you think I like? green, yellow, black, grey');
   }
@@ -117,7 +115,7 @@ for(let i=6 ; i>1 ; i--)
     guess=prompt('which colors do you think I like? green, yellow, black, grey');
   }
   else {
-    break;
+    alert('I like grey and black');
   }
 }
 alert('Thanks for your time ' + userName);

@@ -1,1 +1,2 @@
 # About-me
+<p>Today we learned how to use loops and conditional statements at once and produce output based on the user's input, as well as using the arrays in loops and conditions also based on the user's input.</p>
