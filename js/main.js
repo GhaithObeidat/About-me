@@ -1,12 +1,13 @@
 'use strict';
-
+let c=0;
 let userName = prompt('What is your name?');
 alert('Welcome ' + userName);
 function myAge(){
   let age = prompt('do you think my age is more than 25?');
   if(age .toLowerCase()==='no' || age .toLowerCase()==='n')
-{
-  alert('That is true I was born in 1997');
+  {
+    alert('That is true I was born in 1997');
+    c=c+1;
   }
   else if(age .toLowerCase()==='yes' || age .toLowerCase()=== 'y')
   {
@@ -24,6 +25,7 @@ function myHight(){
   if(height .toLowerCase()==='no' || height .toLowerCase()==='n')
   {
     alert('That is right I am 1.8 m exactly');
+    c=c+1;
   }
   else if(height .toLowerCase()==='yes' || height .toLowerCase()=== 'y')
   {
@@ -45,6 +47,7 @@ function myGlasses(){
   else if(glasses .toLowerCase()==='yes' || glasses .toLowerCase()=== 'y')
   {
     alert('yes I was born with glasses lol');
+    c=c+1;
   }
   else{
     alert('arent you interested in glasses too?');
@@ -61,6 +64,7 @@ function myMusic(){
   else if(Music .toLowerCase()==='yes' || Music .toLowerCase()=== 'y')
   {
     alert('You are right I love hip hop');
+    c=c+1;
   }
   else{
     alert('Music is life man');
@@ -77,6 +81,7 @@ function myStudy(){
   else if(Study .toLowerCase()==='yes' || Study .toLowerCase()=== 'y')
   {
     alert('Yes I studied civil engineering');
+    c=c+1;
   }
   else{
     alert('It is alright I know nobody is intersted in that');
@@ -92,6 +97,7 @@ function myBd(){
     if (number === '9')
     {
       alert('That is absolutely right');
+      c=c+1;
       break;
     }
     else if(number>9){
@@ -113,28 +119,27 @@ myBd();
 
 function myFavColor(){
   let color=['green', 'yellow', 'black', 'grey'];
-  let guess=prompt('which colors do you think I like? green, yellow, black, grey');
-
-  for(let i=0 ; i<6 ; i++)
+  let guess=prompt('which colors do you think I like, green, yellow, black, grey?');
+  let right=false;
+  for(let i=0 ; i<5 ; i++)
   {
-    if(guess .toLowerCase()==='grey' || guess .toLowerCase()==='black') {
-      guess=prompt('You are definetely right! Now try another one');
-      alert('Definetely right');
+    guess=prompt('which colors do you think I like, green, yellow, black, grey?');
+    for(let i=0 ; i< color.length ; i++){
+      if (guess .toLowerCase()===color[i] .toLowerCase()){
+        right=true;
+        break;
+      }
+
+    }
+    if (right){
+      alert('Right answer');
+      c=c+1;
       break;
     }
-    else if (guess .toLowerCase()==='yellow' || guess .toLowerCase()==='green'){
-      alert('Wrong');
-      guess=prompt('which colors do you think I like? green, yellow, black, grey');
-    }
-    else if (guess .toLowerCase() !==color)
-    {
-      guess=prompt('which colors do you think I like? green, yellow, black, grey');
-    }
-    else {
-      alert('I like grey and black');
-    }
+
   }
 }
 myFavColor();
+alert(' out of 7 question you got ' + c);
 alert('Thanks for your time ' + userName);
 
